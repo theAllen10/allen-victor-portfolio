@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050706">
+<meta name="description" content="Allen Victor — Web3 content creator, writer, campaign creator, clipper and video editor.">
+<title>Allen Victor — Web3 Creator</title>
+<style>
+:root{--bg:#050706;--card:#0a0e0c;--card2:#0d1410;--txt:#f5f7f5;--muted:#a9b3ac;--g:#59dc78;--g2:#8be39c;--line:rgba(139,227,156,.15);--max:1160px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(900px 500px at 85% -5%,rgba(89,220,120,.13),transparent 60%),var(--bg);color:var(--txt);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+nav{position:sticky;top:0;z-index:50;background:rgba(5,7,6,.86);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:950;letter-spacing:.12em}.brand i{font-style:normal;color:var(--g)}
+.navlinks{display:flex;gap:22px;color:var(--muted);font-size:14px}.navlinks a:hover{color:var(--g2)}
+.hero{padding:68px 0 45px;display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center;min-height:650px}
+.kicker,.eyebrow{color:var(--g2);font-weight:850;letter-spacing:.16em;text-transform:uppercase;font-size:11px}
+h1{font-size:clamp(48px,7vw,84px);line-height:.94;letter-spacing:-.06em;margin:17px 0 24px}h1 span{color:var(--g)}
+.lead{font-size:18px;color:var(--muted);max-width:690px}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:11px 17px;border-radius:999px;border:1px solid var(--line);font-weight:850;transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--g);color:#061008;border-color:var(--g)}
+.hero-card{position:relative;min-height:425px;border:1px solid var(--line);border-radius:30px;overflow:hidden;background:#08100b;isolation:isolate}
+.hero-card .banner{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.78}
+.hero-card:after{content:"";position:absolute;inset:0;background:linear-gradient(145deg,rgba(0,0,0,.08),rgba(0,0,0,.78));z-index:1}
+.hero-avatar{position:absolute;right:25px;top:25px;width:82px;height:82px;border-radius:50%;object-fit:cover;border:2px solid rgba(139,227,156,.65);z-index:3}
+.hero-copy{position:absolute;left:28px;right:28px;bottom:28px;z-index:3}.hero-copy strong{display:block;font-size:28px;letter-spacing:-.035em}.hero-copy small{color:var(--g2);letter-spacing:.12em;text-transform:uppercase}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:23px;overflow:hidden;background:rgba(10,14,12,.8)}
+.stat{padding:25px;border-right:1px solid var(--line)}.stat:last-child{border:0}.num{font-size:31px;font-weight:950;color:var(--g)}.lab{font-size:11px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+section{padding:92px 0}h2{font-size:clamp(34px,5vw,56px);line-height:1.03;letter-spacing:-.05em;margin:10px 0 18px}.muted{color:var(--muted);max-width:700px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{border:1px solid var(--line);border-radius:24px;padding:28px;background:linear-gradient(145deg,rgba(13,20,16,.95),rgba(7,10,8,.95))}
+.cap{font-weight:900;margin-top:18px}.cap:first-child{margin-top:0}.panel p{color:var(--muted)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:27px 0 20px}.filter{appearance:none;cursor:pointer;color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:999px;padding:9px 14px;font:inherit;font-size:13px}.filter.active{background:var(--g);color:#061008;border-color:var(--g)}
+.workgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.work{background:var(--card);border:1px solid var(--line);border-radius:23px;overflow:hidden;transition:.22s}.work:hover{transform:translateY(-4px);border-color:rgba(89,220,120,.4)}
+.thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:linear-gradient(135deg,#09120d,#050706);display:flex;align-items:flex-end;padding:18px}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.3s}.thumb:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02) 35%,rgba(0,0,0,.72))}.work:hover .thumb img{transform:scale(1.025)}
+.thumb b{position:relative;z-index:2;font-size:25px;letter-spacing:-.04em;line-height:1.05}.tag{position:absolute;z-index:3;top:13px;left:13px;color:var(--g2);border:1px solid rgba(139,227,156,.4);background:rgba(5,7,6,.8);border-radius:999px;padding:5px 9px;font-size:9px;letter-spacing:.13em}
+.body{padding:18px}.body h3{margin:0 0 6px;font-size:17px}.body p{margin:0 0 15px;color:var(--muted);font-size:13px}.proof{color:var(--g2);font-weight:850;font-size:13px}
+.clients{display:flex;flex-wrap:wrap;gap:9px;margin-top:25px}.client{border:1px solid var(--line);border-radius:999px;padding:9px 13px;color:#dce5df;background:rgba(10,14,12,.7);font-size:13px}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}.service{min-height:145px}
+.timeline{display:grid;gap:0}.role{display:grid;grid-template-columns:160px 1fr;gap:25px;padding:23px 0;border-bottom:1px solid var(--line)}.role:last-child{border-bottom:0}.date{color:var(--g2);font-size:12px;font-weight:850}.role h3{margin:0;font-size:18px}.role p{margin:6px 0 0;color:var(--muted);font-size:14px}
+.cta{border:1px solid rgba(89,220,120,.28);border-radius:30px;padding:48px;background:radial-gradient(550px 240px at 90% 0%,rgba(89,220,120,.16),transparent 65%),var(--card)}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:850px){.hero{grid-template-columns:1fr;min-height:auto;padding-top:48px}.hero-card{min-height:380px}.stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.workgrid{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}.services{grid-template-columns:1fr}}
+@media(max-width:600px){.wrap{width:min(100% - 28px,var(--max))}.nav{height:62px}.navlinks{display:none}.hero{padding:42px 0 28px;gap:24px}h1{font-size:49px;margin-top:13px}.lead{font-size:16px}.hero-card{min-height:300px;border-radius:23px}.hero-avatar{width:62px;height:62px;right:17px;top:17px}.hero-copy{left:19px;right:19px;bottom:19px}.hero-copy strong{font-size:22px}.stats{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)!important;padding:20px}.stat:last-child{border-bottom:0!important}.num{font-size:28px}section{padding:68px 0}h2{font-size:37px}.workgrid{grid-template-columns:1fr}.thumb{aspect-ratio:16/10}.services{grid-template-columns:1fr}.panel{padding:22px}.role{grid-template-columns:1fr;gap:4px;padding:20px 0}.cta{padding:30px 22px;border-radius:24px}.actions .btn{width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.work,.btn,.thumb img{transition:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav"><a class="brand" href="#">ALLEN<i>.</i></a><div class="navlinks"><a href="#work">Work</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div></div></nav>
+
+<main>
+<section class="wrap hero">
+<div>
+<div class="kicker">Web3 Content Creator · Writer · Clipper · Editor</div>
+<h1>Observing.<br>Creating.<br><span>Sharing.</span></h1>
+<p class="lead">I turn Web3 ideas, products and conversations into content people want to read, watch and share.</p>
+<div class="actions"><a class="btn primary" href="#work">View my work →</a><a class="btn" href="#contact">Work with me</a></div>
+</div>
+<div class="hero-card">
+<img class="banner" src="brand-banner.png" alt="Allen Victor brand banner" onerror="this.src='banner.jpg'">
+<img class="hero-avatar" src="avatar.jpeg" alt="Allen Victor avatar">
+<div class="hero-copy"><small>Allen Victor</small><strong>Web3 content built for attention.</strong></div>
+</div>
+</section>
+
+<section class="wrap" style="padding-top:10px">
+<div class="stats">
+<div class="stat"><div class="num">2,000+</div><div class="lab">Posts made</div></div>
+<div class="stat"><div class="num">700K+</div><div class="lab">Views · past year</div></div>
+<div class="stat"><div class="num">10+</div><div class="lab">Campaign wins</div></div>
+<div class="stat"><div class="num">500+</div><div class="lab">Clips made / posted</div></div>
+</div>
+</section>
+
+<section class="wrap">
+<div class="eyebrow">About</div><h2>A creator across the whole content loop.</h2>
+<div class="grid2"><div class="panel"><p>I started in Web3 through ambassador and community roles, then moved deeper into content creation, research-led writing, campaigns, partnerships and short-form media.</p><p>Today I work across the full content loop: understanding a project, finding the angle, creating the content and turning long-form conversations into short-form pieces built for attention.</p></div>
+<div class="panel"><div class="cap">Writing</div><p>Threads, explainers, research-led posts and social copy.</p><div class="cap">Campaigns</div><p>Promotional content, launches and campaign submissions.</p><div class="cap">Clipping & Editing</div><p>Short-form clips, promotional videos, B-roll and social-first edits.</p></div></div>
+</section>
+
+<section class="wrap" id="work">
+<div class="eyebrow">Selected work</div><h2>Proof, not just promises.</h2><p class="muted">Actual screenshots from my published work — not generic placeholders. Open a card to see the full proof image, or open the original post where available.</p>
+<div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="writing">Writing</button><button class="filter" data-filter="campaign">Campaigns</button><button class="filter" data-filter="clipping">Clipping</button></div>
+
+<div class="workgrid">
+<article class="work" data-type="campaign">
+<a class="thumb" href="proof-screenshots/IMG_9088.png" target="_blank" rel="noopener"><img src="assets/skillful-ai.jpg" alt="Skillful AI post proof"><span class="tag">CAMPAIGN</span><span class="proofshot">VIEW PROOF ↗</span></a>
+<div class="body"><h3>Skillful AI</h3><p>AI-agent product content showing how I turn a product idea into an accessible social narrative.</p><a class="proof" href="proof-screenshots/IMG_9088.png" target="_blank" rel="noopener">View screenshot →</a></div></article>
+
+<article class="work" data-type="writing">
+<a class="thumb" href="https://x.com/oxallennn/status/2014447017158640056?s=46" target="_blank" rel="noopener"><img src="assets/apex.jpg" alt="Apex thread proof"><span class="tag">WRITING</span><span class="proofshot">OPEN ORIGINAL ↗</span></a>
+<div class="body"><h3>Apex</h3><p>Research-led thread breaking down the 2026 Apex New Year Trading Competition.</p><a class="proof" href="https://x.com/oxallennn/status/2014447017158640056?s=46" target="_blank" rel="noopener">View original →</a></div></article>
+
+<article class="work" data-type="writing">
+<a class="thumb" href="https://x.com/oxallennn/status/1964931925543690248" target="_blank" rel="noopener"><img src="assets/kolytics.jpg" alt="Kolytics post proof"><span class="tag">WRITING</span><span class="proofshot">OPEN ORIGINAL ↗</span></a>
+<div class="body"><h3>Kolytics</h3><p>Product-focused Web3 writing explaining a practical trading tool and its use case.</p><a class="proof" href="https://x.com/oxallennn/status/1964931925543690248" target="_blank" rel="noopener">View original →</a></div></article>
+
+<article class="work" data-type="campaign">
+<a class="thumb" href="https://x.com/oxallennn/status/2073171983928365209?s=46" target="_blank" rel="noopener"><img src="assets/mexc.jpg" alt="MEXC campaign proof"><span class="tag">CAMPAIGN</span><span class="proofshot">OPEN ORIGINAL ↗</span></a>
+<div class="body"><h3>MEXC × AP Collective</h3><p>Campaign content built around the MEXC prediction challenge and football conversation.</p><a class="proof" href="https://x.com/oxallennn/status/2073171983928365209?s=46" target="_blank" rel="noopener">View campaign →</a></div></article>
+
+<article class="work" data-type="campaign">
+<a class="thumb" href="https://x.com/OxAllennn/status/1957342273294782479?s=20" target="_blank" rel="noopener"><img src="assets/inflectiv.jpg" alt="Inflectiv post proof"><span class="tag">CAMPAIGN</span><span class="proofshot">OPEN ORIGINAL ↗</span></a>
+<div class="body"><h3>Inflectiv AI</h3><p>Product education around datasets, AI agents and Inflectiv's data workflow.</p><a class="proof" href="https://x.com/OxAllennn/status/1957342273294782479?s=20" target="_blank" rel="noopener">View original →</a></div></article>
+
+<article class="work" data-type="campaign">
+<a class="thumb" href="https://x.com/OxAllennn/status/1991067951504499173?s=20" target="_blank" rel="noopener"><img src="assets/predictbase.jpg" alt="PredictBase post proof"><span class="tag">CAMPAIGN</span><span class="proofshot">OPEN ORIGINAL ↗</span></a>
+<div class="body"><h3>PredictBase V3</h3><p>Product-focused content explaining the next phase of an on-chain prediction market.</p><a class="proof" href="https://x.com/OxAllennn/status/1991067951504499173?s=20" target="_blank" rel="noopener">View work →</a></div></article>
+
+<article class="work" data-type="campaign">
+<a class="thumb" href="https://x.com/OxAllennn/status/1999904123106320500?s=20" target="_blank" rel="noopener"><img src="assets/clearpool.jpg" alt="Clearpool post proof"><span class="tag">CAMPAIGN</span><span class="proofshot">OPEN ORIGINAL ↗</span></a>
+<div class="body"><h3>Clearpool</h3><p>Research-led content connecting tokenized credit, public blockchains and hybrid finance.</p><a class="proof" href="https://x.com/OxAllennn/status/1999904123106320500?s=20" target="_blank" rel="noopener">View original →</a></div></article>
+
+<article class="work" data-type="clipping">
+<a class="thumb" href="proof-screenshots/IMG_9095.jpeg" target="_blank" rel="noopener"><img src="assets/shortform.jpg" alt="Short-form edit proof"><span class="tag">CLIPPING / EDITING</span><span class="proofshot">VIEW PROOF ↗</span></a>
+<div class="body"><h3>Short-form edit</h3><p>Vertical social edit using visual pacing, captions and a strong hook for attention.</p><a class="proof" href="proof-screenshots/IMG_9095.jpeg" target="_blank" rel="noopener">View screenshot →</a></div></article>
+
+<article class="work" data-type="clipping">
+<a class="thumb" href="https://x.com/OxAllennn/status/2041633156843835633/video/1?s=46" target="_blank" rel="noopener"><img src="assets/fogo.jpg" alt="Fogo clipping proof"><span class="tag">CLIPPING</span><span class="proofshot">WATCH CLIP ↗</span></a>
+<div class="body"><h3>Fogo</h3><p>Short-form clip from a Fogo conversation, formatted for social-first viewing.</p><a class="proof" href="https://x.com/OxAllennn/status/2041633156843835633/video/1?s=46" target="_blank" rel="noopener">Watch clip →</a></div></article>
+
+<article class="work" data-type="clipping">
+<a class="thumb" href="https://x.com/OxAllennn/status/2053886427428205004/video/1?s=46" target="_blank" rel="noopener"><img src="assets/multibank.jpg" alt="MultiBank clipping proof"><span class="tag">CLIPPING</span><span class="proofshot">WATCH CLIP ↗</span></a>
+<div class="body"><h3>MultiBank</h3><p>Clipped a long-form RWA discussion into a concise, social-ready moment.</p><a class="proof" href="https://x.com/OxAllennn/status/2053886427428205004/video/1?s=46" target="_blank" rel="noopener">Watch clip →</a></div></article>
+</div>
+</section>
+
+<section class="wrap">
+<div class="eyebrow">Clients & projects</div><h2>Notable work across Web3.</h2>
+<div class="clients"><span class="client">Manta Network</span><span class="client">Aptos</span><span class="client">MultiBank</span><span class="client">Diamante</span><span class="client">Fogo</span><span class="client">Beluga</span><span class="client">Invent Network</span><span class="client">Edel Finance</span><span class="client">Open Gradient</span><span class="client">Fomo</span><span class="client">Mind AI</span><span class="client">Vanar Chain</span><span class="client">Inflectiv AI</span><span class="client">PredictBase</span><span class="client">Clearpool</span><span class="client">Bullet</span><span class="client">MEXC</span><span class="client">Paradex</span></div>
+</section>
+
+<section class="wrap" id="services">
+<div class="eyebrow">Services</div><h2>What I can do for a Web3 project.</h2>
+<div class="services"><div class="panel service"><div class="cap">01 · Web3 Writing</div><p>Threads, explainers, product breakdowns, research-led content and social copy.</p></div>
+<div class="panel service"><div class="cap">02 · Campaign Content</div><p>Launches, promotions, campaign submissions and content around project goals.</p></div>
+<div class="panel service"><div class="cap">03 · Clipping</div><p>Turn streams, spaces and long-form conversations into concise short-form clips.</p></div>
+<div class="panel service"><div class="cap">04 · Video Editing</div><p>Promotional videos, B-roll edits and social-first video content.</p></div></div>
+</section>
+
+<section class="wrap" id="experience">
+<div class="eyebrow">Experience</div><h2>From ambassador to creator.</h2>
+<div class="panel timeline">
+<div class="role"><div class="date">2023 — 2024</div><div><h3>Early Web3 & Community</h3><p>Wirex · Binance Square · Nicegram · DigiFinex. Built early experience across ambassador, community and content roles.</p></div></div>
+<div class="role"><div class="date">2024 — 2025</div><div><h3>Ambassador, Content & Partnerships</h3><p>Noracle · SafeYields · RhodyRdy · Mey Network · EntangleFi · Manta Network.</p></div></div>
+<div class="role"><div class="date">2025 — Present</div><div><h3>Creator & Content</h3><p>Bullet · Mind AI · Self Chain · Vanar Chain · Inflectiv AI · PredictBase · Clearpool and promotional projects.</p></div></div>
+<div class="role"><div class="date">2025 — Present</div><div><h3>Clipping & Short-form Media</h3><p>Aptos · MultiBank · Diamante · Fogo · Beluga · Invent Network · Edel Finance · Open Gradient · Fomo and others.</p></div></div>
+</div>
+</section>
+
+<section class="wrap" id="contact">
+<div class="cta"><div class="eyebrow">Let's work</div><h2>Have a Web3 project that needs attention?</h2><p class="muted">Let's turn your ideas, products and conversations into content people actually want to see.</p>
+<div class="actions"><a class="btn primary" href="mailto:allenvictorr1@gmail.com">Email me →</a><a class="btn" target="_blank" rel="noopener" href="https://x.com/OxAllennn">X / Twitter</a><a class="btn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/allen-victor-76b3b02a4">LinkedIn</a><a class="btn" target="_blank" rel="noopener" href="https://t.me/allenvictorr1">Telegram</a></div></div>
+</section>
+</main>
+<footer><div class="wrap foot"><div>© Allen Victor</div><div>Web3 Content · Writing · Campaigns · Clipping · Editing</div></div></footer>
+<script>
+const buttons=[...document.querySelectorAll('.filter')],cards=[...document.querySelectorAll('.work')];
+buttons.forEach(b=>b.addEventListener('click',()=>{buttons.forEach(x=>x.classList.remove('active'));b.classList.add('active');const f=b.dataset.filter;cards.forEach(c=>c.style.display=f==='all'||c.dataset.type===f?'':'none')}));
+</script>
+</body>
+</html>
